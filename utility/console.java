@@ -21,5 +21,10 @@ public class console {
 		System.out.println(i);
 
 	}
+	public static void log(boolean i) {
+		System.out.println(i);
+
+	}
+
 
 }

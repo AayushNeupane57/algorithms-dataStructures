@@ -6,10 +6,10 @@ public class RandNumber {
 	public  static void generateRandomArray (int [] arr,int size) {
 		Random rand=new Random();
 		for (int i=0;i<size;i++) {
-			arr[i]=rand.nextInt(size-1);
+			arr[i]=rand.nextInt(size);
 		}
-		console.log("random array");
-		console.log(arr);
+//		console.log("random array");
+//		console.log(arr);
 		 
 	}
 

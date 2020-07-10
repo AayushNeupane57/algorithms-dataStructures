@@ -22,7 +22,7 @@ public class InsertionSort {
 	
 	//test client
 	public static void main(String [] args) {
-		int size=50;
+		int size=10000000;
 		int []arr=new int[size];
 		RandNumber.generateRandomArray(arr, size);
 		sort(arr);
