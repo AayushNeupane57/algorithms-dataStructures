@@ -42,7 +42,7 @@ public class ShellShort {
 	public static void main(String []args) {
 		int size=100000000;
 		int []arr=new int[size];
-		RandNumber.generateRandomArray(arr, size);
+		RandNumber.generateRandomArray(arr, size,size);
 		sort(arr);
 		console.log(" shellsorted array");
 //		console.log(arr);

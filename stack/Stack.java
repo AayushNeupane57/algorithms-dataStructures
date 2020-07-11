@@ -12,7 +12,7 @@ public class Stack<Type> {
 		Node next;
 		
 	}
-	Stack(){
+	public Stack(){
 		first=null;
 	}
 	
@@ -30,7 +30,10 @@ public class Stack<Type> {
 			return oldFirst.data;
 
 	}
-
+	
+	public boolean isEmpty() {
+		return first==null;
+	}
 	//test client from Stack implementation
 	public static void main(String[]args){
 		

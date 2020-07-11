@@ -1,8 +1,7 @@
 package percolation;
 import java.util.Random;
+import utility.*;
 
-import percolation.Percolation;
-import percolation.console;
 
 public class PercolationTester {
 

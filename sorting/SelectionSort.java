@@ -29,7 +29,7 @@ public class SelectionSort {
 	public static void main(String[] args) {
 		int size=100000;
 		int []arr=new int[size];
-		RandNumber.generateRandomArray(arr, size);
+		RandNumber.generateRandomArray(arr, size,size);
 		sort(arr);
 		console.log("selection sorted array");
 

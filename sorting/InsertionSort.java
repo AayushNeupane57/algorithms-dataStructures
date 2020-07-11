@@ -24,7 +24,7 @@ public class InsertionSort {
 	public static void main(String [] args) {
 		int size=10000000;
 		int []arr=new int[size];
-		RandNumber.generateRandomArray(arr, size);
+		RandNumber.generateRandomArray(arr, size,size);
 		sort(arr);
 		console.log("insertion sorted array");
 		console.log(arr);
