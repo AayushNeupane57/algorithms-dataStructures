@@ -30,11 +30,8 @@ public class BinarySearch {
 	
 	public static void main(String[] args) {
 		int []arr= {1,3,4,9,2,6,8,-5,-3,55,-43,5};
-		
-		int high=arr.length-1;
-		int low=0;
-		int [] aux=new int [arr.length];
-		Mergesort.sort(arr, high, low, aux);
+
+		Mergesort.sort(arr);
 		console.log("sortedArray");
 		console.log(arr);
 		

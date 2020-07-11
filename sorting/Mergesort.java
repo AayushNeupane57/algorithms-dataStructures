@@ -2,7 +2,14 @@ package sorting;
 
 public class Mergesort {
 	
-	public static void sort(int []arr,int high, int low,int []aux) {	
+	
+	public static void sort(int []arr){
+		int high=arr.length-1;
+		int low=0;
+		int [] aux=new int[arr.length];
+		sort(arr,high,low,aux);
+	}
+	private static void sort(int []arr,int high, int low,int []aux) {	
 		int mid=(high+low)/2;
 
 		//base case

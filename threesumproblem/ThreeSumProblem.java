@@ -28,9 +28,8 @@ public class ThreeSumProblem {
 		}
 	}
 	public static int find(int [] arr) {
-		int [] aux =new int[arr.length];
 		int num=0;
-		Mergesort.sort(arr,arr.length-1,0,aux);
+		Mergesort.sort(arr);
 		console.log("sorted arary");
 		console.log(arr);
 		

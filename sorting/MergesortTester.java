@@ -19,10 +19,8 @@ public class MergesortTester {
 		
 		int numberOfItems=100000000;
 		int []arr=new int[numberOfItems];
-		int []aux=new int [numberOfItems];
-		
 		generateRandomArray (arr, numberOfItems);
-		Mergesort.sort(arr, numberOfItems-1, 0, aux);
+		Mergesort.sort(arr);
 		console.log("sorted ");
 //		console.log(arr);
 		
