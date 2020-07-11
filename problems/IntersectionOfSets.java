@@ -12,14 +12,28 @@ public class IntersectionOfSets {
 	}
 	
 	public static void intersection(Point arr1[],Point arr2[]) {
-		for(Point elm:arr1) {
-			if(Point.search(arr2,elm)!=-1) {
+		int i=0;
+		int j=0;
+		//complexity O(m+n)
+		//if two array have same size then the big O notation is O(2N)
+		while(i!=arr1.length &&j!=arr2.length) {
+			Point p1=arr1[i];
+			Point p2=arr2[j];
+			if(Point.compare(p1, p2)==0) {
 				count++;
-				console.log("found common element");
-				console.log(elm);
+				console.log("found intersection");
+				console.log(p1);
+				i++;
+				j++;
 			}
-			
+			else if(Point.compare(p1, p2)==-1) {
+				i++;
+			}
+			else if(Point.compare(p1, p2)==1) {
+				j++;
+			}
 		}
+		
 	}
 	
 	//test client
@@ -29,7 +43,8 @@ public class IntersectionOfSets {
 		Point [] arr1=new Point[size];
 		Point [] arr2=new Point[size];
 		console.log("unsorted array");
-		//this function also generates duplicate points that needs to be fixed
+		
+		//generates sorted points using insertion sort using insertion sort without duplicate
 		RandNumber.generate2dPointsArraySorted(arr1, size, lessthan);
 		RandNumber.generate2dPointsArraySorted(arr2, size, lessthan);
 		console.log("sorted array");
