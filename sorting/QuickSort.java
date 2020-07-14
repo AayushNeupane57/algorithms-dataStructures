@@ -11,7 +11,7 @@ public class QuickSort {
 		//my array is randomly generated so i dont think i need this suffle
 
 //		FisherYatesShuffle.suffle(arr);
-		console.log("suffled arrat");
+//		console.log("suffled arrat");
 //		console.log(arr);
 		sort(arr,arr.length-1,0);
 	}
