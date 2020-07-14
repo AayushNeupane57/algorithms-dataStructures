@@ -4,6 +4,12 @@ import java.util.Random;
 import java.util.Set;
 
 public class RandNumber {
+	public static int  generateRandomNumber(int lessthan) {
+		Random rand=new Random();
+		return rand.nextInt(lessthan);
+		
+	}
+	
 	public  static void generateRandomArray (int [] arr,int size ,int lessthan) {
 		Random rand=new Random();
 		for (int i=0;i<size;i++) {
