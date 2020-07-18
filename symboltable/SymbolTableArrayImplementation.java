@@ -28,6 +28,12 @@ public class SymbolTableArrayImplementation<Key extends Comparable<Key>,Value> {
 			keys=newKeys;
 			values=newValues;
 		}
+		int index=getKeyIndex(key);
+		if(index!=-1) {
+			keys[index]=key;
+			values[index]=val;
+			return;
+		}
 		keys[currentIndex]=key;
 		values[currentIndex]=val;
 		currentIndex++;
@@ -61,6 +67,17 @@ public class SymbolTableArrayImplementation<Key extends Comparable<Key>,Value> {
 		
 	}
 	public void delete(Key key) {
+		if(currentIndex<=keys.length/4) {
+			//resize the array
+			Key []newKeys=(Key [])new Comparable[keys.length/2];
+			Value []newValues=(Value [])new Comparable[keys.length/2];
+			for(int i=1;i<currentIndex;i++) {
+				newKeys[i]=keys[i];
+				newValues[i]=values[i];
+			}
+			keys=newKeys;
+			values=newValues;
+		}
 		Key []newKeys=(Key[])new Comparable[currentIndex];
 		Value []newValues=(Value[])new Comparable[currentIndex];
 		int i=0;
@@ -72,6 +89,7 @@ public class SymbolTableArrayImplementation<Key extends Comparable<Key>,Value> {
 		}
 		keys=newKeys;
 		values=newValues;
+		currentIndex--;
 	}
 	public Iterable<Key> keys(){
 		Queue<Key>q =new Queue<Key>();
