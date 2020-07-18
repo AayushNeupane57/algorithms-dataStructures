@@ -13,6 +13,16 @@ public class BinaryHeap<Type extends Comparable<Type>> {
 		//we implement 1 based index because it makes it easy for calculation
 		currentIndex=1;
 	}
+	//when we want to construct binary heap provided array
+	BinaryHeap(Type[]arr){
+		
+		items=(Type[]) new Comparable[arr.length+1];
+		currentIndex=1;
+		for(int i=0;i<arr.length;i++) {
+			insert(arr[i]);
+		}
+		
+	}
 
 	//insert
 	public void insert(Type x) {
@@ -86,24 +96,33 @@ public class BinaryHeap<Type extends Comparable<Type>> {
 		arr[i]=arr[j];
 		arr[j]=temp;
 	}
+	public Type[] sort() {
+		while(true)
+		{
+		if(currentIndex==1) {
+			break;
+			
+		}
+
+		swap(items,1,currentIndex-1);
+		currentIndex--;
+		sink(1);
+		}
+		return items;
+	}
 	
 	//test client
 	public static void main(String[] args) {
 		console.log(" i started binary heap");
 		BinaryHeap <String>bh=new BinaryHeap<>();
 		bh.insert("cool");
-		console.log(bh.items);
 		bh.insert("dool");
-		console.log(bh.items);
 		bh.insert("kool");
-		console.log(bh.items);
 		bh.insert("eool");
+		bh.sort();
 		console.log(bh.items);
-		console.log(bh.removeMax());
-		console.log(bh.removeMax());
-		console.log(bh.removeMax());
-		console.log(bh.removeMax());
-		console.log(bh.items);
+		
+
 	}
 
 }
