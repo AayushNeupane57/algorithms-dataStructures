@@ -9,6 +9,13 @@ public class console {
 		}
 		System.out.println(" ] ");
 	}
+	public static void log(Integer []arr) {
+		System.out.printf("[ ");
+		for(Integer elm:arr) {
+			System.out.printf( elm+ ",");
+		}
+		System.out.println(" ] ");
+	}
 	public static void log(Comparable []arr) {
 		System.out.printf("[ ");
 		for(Comparable elm:arr) {

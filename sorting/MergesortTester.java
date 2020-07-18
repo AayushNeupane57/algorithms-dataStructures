@@ -17,7 +17,7 @@ public class MergesortTester {
 	
 	public static void main(String [] args) {
 		
-		int numberOfItems=100000000;
+		int numberOfItems=10000000;
 		int []arr=new int[numberOfItems];
 		generateRandomArray (arr, numberOfItems);
 		Mergesort.sort(arr);
