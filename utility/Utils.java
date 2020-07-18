@@ -7,5 +7,11 @@ public class Utils {
 		arr[i]=arr[j];
 		arr[j]=temp;
 	}
+	public static int compare(int a,int b) {
+		if(a==b)return 0;
+		if(a<b)return -1;
+		else return 1;
+	}
+	
 
 }

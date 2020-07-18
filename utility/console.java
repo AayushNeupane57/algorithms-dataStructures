@@ -9,6 +9,13 @@ public class console {
 		}
 		System.out.println(" ] ");
 	}
+	public static void log(Comparable []arr) {
+		System.out.printf("[ ");
+		for(Comparable elm:arr) {
+			System.out.printf( elm+ ",");
+		}
+		System.out.println(" ] ");
+	}
 	public static void log(String s) {
 
 		System.out.println(s);
@@ -18,6 +25,14 @@ public class console {
 
 	}
 	public static void log(int i) {
+		System.out.println(i);
+
+	}
+	public static void log(float i) {
+		System.out.println(i);
+
+	}
+	public static void log(double i) {
 		System.out.println(i);
 
 	}

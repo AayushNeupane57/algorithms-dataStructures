@@ -20,5 +20,9 @@ public class console {
 		System.out.println(i);
 
 	}
+	public static void log(double d) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
