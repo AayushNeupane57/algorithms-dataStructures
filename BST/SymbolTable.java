@@ -3,7 +3,7 @@ package BST;
 import sorting.console;
 import queue.Queue;
 
-public class BST<Key extends Comparable<Key>,Value> {
+public class SymbolTable<Key extends Comparable<Key>,Value> {
 
 	
 	public Node root;
@@ -38,7 +38,7 @@ public class BST<Key extends Comparable<Key>,Value> {
 		//after this line one stack up in the recursion
 	}
 	
-	public BST() {
+	public SymbolTable() {
 		// TODO Auto-generated constructor stub
 		root =null;
 	}
@@ -300,7 +300,7 @@ public class BST<Key extends Comparable<Key>,Value> {
 
 //test client
 	public static void main(String []args) {
-		BST<String,Integer> bst=new BST<>();
+		SymbolTable<String,Integer> bst=new SymbolTable<>();
 		bst.put("one",1);
 		bst.put("two",2);
 		bst.put("three",3);
