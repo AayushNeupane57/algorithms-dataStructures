@@ -7,7 +7,7 @@ public class BinaryHeap<Type extends Comparable<Type>> {
 	int currentIndex;
 	public  Type []items;
 	
-	BinaryHeap(){
+	public BinaryHeap(){
 		
 		items=(Type[]) new Comparable[4];
 		//we implement 1 based index because it makes it easy for calculation
@@ -77,6 +77,11 @@ public class BinaryHeap<Type extends Comparable<Type>> {
 		}
 	}
 	private void sink(int index) {
+		//this if condition needs better solution
+		if(index<=currentIndex/2&&2*index+1==currentIndex&&items[index].compareTo(items[2*index])<0) {
+			swap(items,index,2*index);
+			index=2*index;
+		}
 		while(index<currentIndex/2 && (items[index].compareTo(items[2*index])<0||items[index].compareTo(items[2*index+1])<0)) {
 			int max =maxIndexOf(items,2*index,2*index+1);
 			swap(items,index,max);

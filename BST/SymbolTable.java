@@ -37,6 +37,42 @@ public class SymbolTable<Key extends Comparable<Key>,Value> {
 		inOrderTraversal(x.right, q);
 		//after this line one stack up in the recursion
 	}
+	public void MorrisTraversal() {
+		Node current,predecessor;
+		current=root;
+		while(current!=null) {			
+			if(current.left==null) {
+				System.out.println(current.value);
+				current=current.right;
+			}
+			else {
+
+				predecessor=current.left;
+				
+				while(predecessor.right!=null&&predecessor.right!=current) {
+					predecessor=predecessor.right;
+					
+				}
+				if(predecessor.right==null) {
+
+					predecessor.right=current;
+					current=current.left;
+
+				}
+				else {
+					
+					predecessor.right=null;
+
+					System.out.println(current.value);
+					current=current.right;
+					
+				}
+				
+			}
+			
+				
+		}
+	}
 	
 	public SymbolTable() {
 		// TODO Auto-generated constructor stub
@@ -297,6 +333,9 @@ public class SymbolTable<Key extends Comparable<Key>,Value> {
 		x.subTreeSize=1+size(x.left)+size(x.right);
 		return x;
 	}
+	public Node getRoot() {
+		return root;
+	}
 
 //test client
 	public static void main(String []args) {
@@ -312,9 +351,11 @@ public class SymbolTable<Key extends Comparable<Key>,Value> {
 		bst.put("vim",200);
 		bst.print();
 		
-		bst.delete("one");
+//		bst.delete("one");
 		
-		bst.print();
+//		bst.print();
+		console.log("morris traversal");
+		bst.MorrisTraversal();
 
 		
 

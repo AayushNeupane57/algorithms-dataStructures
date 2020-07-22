@@ -97,6 +97,9 @@ public class MinPriorityQueue<Type extends Comparable<Type>> {
 	public void print() {
 		for(int i=0;i<currentIndex;i++)System.out.println(items[i]);
 	}
+	public boolean isEmpty() {
+		return currentIndex==1;
+	}
 	
 	//test client
 	public static void main(String[] args) {
