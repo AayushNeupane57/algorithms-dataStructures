@@ -1,1 +1,1 @@
-It contains implementation of some fundamental data structures and algorithms
+this contains implementation of some fundamental data structures and algorithms
